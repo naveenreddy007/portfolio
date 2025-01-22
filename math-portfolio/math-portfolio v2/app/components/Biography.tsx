@@ -23,28 +23,28 @@ export default function Biography() {
   return (
     <section id="biography" className="py-20">
       <motion.div
-        className="bg-purple-900 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg p-8 max-w-4xl mx-auto"
+        className="bg-purple-900 bg-opacity-20 backdrop-filter backdrop-blur-lg rounded-lg p-8 max-w-6xl mx-auto"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start mb-8">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start mb-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="mb-6 md:mb-0 md:mr-8"
+            className="mb-6 lg:mb-0 lg:mr-8 w-full lg:w-1/3"
           >
             <Image
-              src="https://source.unsplash.com/random/300x300/?mathematics,classroom"
+              src="https://source.unsplash.com/random/600x400/?mathematics,classroom"
               alt="Deepak SP in his office"
-              width={300}
-              height={300}
-              className="rounded-lg"
+              width={600}
+              height={400}
+              className="rounded-lg w-full h-auto"
             />
           </motion.div>
-          <div>
+          <div className="w-full lg:w-2/3">
             <h2 className="text-4xl font-bold mb-6">Biography</h2>
             <motion.p
               className={`mb-4 ${expanded ? "" : "line-clamp-3"}`}
